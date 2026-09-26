@@ -1,0 +1,137 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Privacy Policy — Nox Bible</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<main>
+
+<header>
+  <h1>Privacy Policy</h1>
+  <p class="meta">Nox Bible</p>
+  <p class="meta">Effective date: 26 September 2026</p>
+  <p class="meta">Last updated: 26 September 2026</p>
+</header>
+
+<nav class="top"><a href="support.html">Support</a><a href="delete-account.html">Delete account</a></nav>
+
+<p>I am Dat Vu, an independent developer, and I make Nox Bible on my own. This policy explains, in plain terms, what the app does with information. It covers the iOS and the Android version, which behave the same way except where this page says otherwise.</p>
+
+<h2>The short version</h2>
+<p>Nox Bible is a Bible reader. Every translation in it ships inside the app, so reading, searching, highlighting, writing notes and keeping a streak all work offline and without an account. What you create stays on your phone.</p>
+<ul>
+  <li><strong>No account is needed, and none is made for you.</strong> Signing in with Google or Apple is optional and does one thing: it copies your library to a server so it follows you to another device.</li>
+  <li><strong>No ads, no analytics, no tracking.</strong> There is no advertising SDK, no analytics SDK and no crash-reporting SDK in the app, and it never asks to track you.</li>
+  <li><strong>Nothing to buy.</strong> There are no in-app purchases and no subscriptions.</li>
+</ul>
+<p>If you never sign in, nothing you do in the app leaves your device.</p>
+
+<h2>What stays on your device</h2>
+<div class="card">
+  <p>Two databases live in the app's own storage:</p>
+  <ul>
+    <li><strong>The Bible text</strong>, read-only, the same for everyone. It is part of the app, not information about you.</li>
+    <li><strong>Your library</strong>: the verses you have marked and with which marker style, your notes (their text, tags and the verses they are attached to), your bookmarks, and your reading log — for each day, how many verses and chapters you read and whether the day counted towards your streak, together with the chapters already counted that day so none is counted twice.</li>
+  </ul>
+  <p>Your settings sit beside them: theme, text size, interface language, the translation you are reading, and the chapter you were last on.</p>
+  <p>While you are signed out I never receive any of it. Deleting the app removes all of it the way your phone normally does.</p>
+</div>
+
+<h2 id="account">The account, if you create one</h2>
+<div class="card">
+  <h3>How it starts</h3>
+  <p>It starts when you tap <strong>Continue with Google</strong> or <strong>Continue with Apple</strong> (Apple is offered on iPhone and iPad only), and not before. Until then no account of any kind exists for you and no request is made about you.</p>
+</div>
+<div class="card">
+  <h3>What the sign-in creates</h3>
+  <p>The app trades the credential your provider hands back for a session on <strong>Google Firebase Authentication</strong>, in a project I control. Firebase then holds an account record for you: a user id it generated, which provider you used, and whatever that provider passed along — typically the email address and the display name on your Google or Apple account, and the profile picture address on a Google account. I can see that record in the Firebase console. The app shows your name and email on the account card in the <strong>You</strong> tab so you can tell which account you are in.</p>
+  <p>With <strong>Sign in with Apple</strong> you can choose <em>Hide My Email</em> in Apple's own sheet; the address Firebase records is then Apple's relay address rather than your real one.</p>
+</div>
+<div class="card">
+  <h3>What is synced</h3>
+  <p>Once you are signed in, your library is mirrored to <strong>Cloud Firestore</strong>, under <code>users/&lt;your user id&gt;</code>, where only you can read or write it:</p>
+  <div class="scroll"><table>
+    <tr><th>What</th><th>What is stored</th></tr>
+    <tr><td>Marks</td><td>The verse, the translation it was marked in, and the marker style.</td></tr>
+    <tr><td>Notes</td><td>The text you wrote, its tags, the verses it is attached to, and the translation.</td></tr>
+    <tr><td>Bookmarks</td><td>The verse, its label (such as “John 3:16”) and the translation.</td></tr>
+    <tr><td>Reading log</td><td>For each day you read: the date, how many verses and chapters, whether the day counted, the time it counted and your time-zone offset (so a day is judged by your own midnight, not the server's).</td></tr>
+    <tr><td>Settings</td><td>Theme, interface language, text size and translation.</td></tr>
+    <tr><td>Reading position</td><td>The book and chapter you were last on.</td></tr>
+  </table></div>
+  <p>Each record also carries when it was last changed and when the server received it, which is how two devices agree on which copy is newer. A deleted mark, note or bookmark is kept as a small “deleted” marker so the deletion reaches your other devices too.</p>
+  <p><strong>Your notes are private.</strong> Nobody else can read them — not other readers, and there is no feature that publishes them. I can technically see the database as its administrator; I do not read it, and I would only open an individual record if you asked me to fix something in it.</p>
+</div>
+<div class="card">
+  <h3>Signing out</h3>
+  <p>When you sign out, the app asks whether to <strong>keep</strong> your library on this device or <strong>remove</strong> it from this device. Either way the synced copy stays in your account, ready for the next sign-in. If some changes had not reached the server yet, the app tells you how many before you choose.</p>
+</div>
+<div class="card">
+  <h3>Deleting the account</h3>
+  <p><strong>You tab ▸ account card ▸ Delete account</strong> asks your provider to confirm it is you, then deletes every synced record listed above from the server and deletes the Firebase account itself. The library on the phone you did it from is kept, as a signed-out library, so you do not lose your notes by deleting the account. See <a href="delete-account.html">how to delete your account</a>, including by email if you no longer have the app.</p>
+</div>
+
+<h2>Sharing and copying</h2>
+<div class="card">
+  <p>A share card is drawn on your device and handed to your phone's own share sheet; where it goes from there is your choice and the receiving app's business. Copying a verse puts its text and reference on your clipboard. The app does not upload either, and it does not ask for access to your photos to do it.</p>
+</div>
+
+<h2>If you email me</h2>
+<div class="card">
+  <p>If you write to me for support, I process what you send — your email address, device and app details, screenshots and your message — to answer you and to look into problems. I keep support emails for 12 months unless I have a legal or security reason to keep them longer.</p>
+</div>
+
+<h2>What the app never asks for</h2>
+<p>Nox Bible does not ask for your contacts, location, photos, camera, microphone, health data, or payment details, and it has no password of its own. On Android the manifest declares only internet access, which sync needs; on iOS it asks for no permissions at all.</p>
+
+<h2>Why I process this, and on what basis</h2>
+<ul>
+  <li><strong>The account and sync</strong>: because you signed in. That is your <strong>consent</strong>, and deleting the account withdraws it.</li>
+  <li><strong>Support email</strong>: to answer the request you made of me.</li>
+</ul>
+
+<h2>Who else is involved</h2>
+<ul>
+  <li><strong>Google</strong> — Firebase Authentication and Cloud Firestore, for the account and sync; and Google Sign-In if you choose it.</li>
+  <li><strong>Apple</strong> — Sign in with Apple if you choose it.</li>
+  <li><strong>Apple App Store</strong> and <strong>Google Play</strong> — app distribution.</li>
+</ul>
+<p><strong>I do not sell personal information, and I do not share it for advertising.</strong></p>
+
+<h2>Where the data goes</h2>
+<p>Firebase is operated by Google and may process information on servers outside the country you live in, under Google's own terms and transfer protections. I hold no separate database of my own.</p>
+
+<h2>Security</h2>
+<p>Your library sits in the app's own sandboxed storage, which your phone protects along with the rest of the device. Everything that leaves the app travels over HTTPS. The server's rules let a signed-in reader read and write only their own records, check the shape and size of every write, refuse to let an older copy overwrite a newer one, and refuse every other path in the database outright. No method of storage or transmission is completely secure, and I will not pretend otherwise.</p>
+
+<h2>Children</h2>
+<p>Nox Bible is a general-audience app and is not directed at children. It has no ads, no public profile and nothing that other people can see, and I do not knowingly collect personal information from children below the minimum digital-consent age in their country. If you believe a child has created an account, email me and I will delete it.</p>
+
+<h2>Your choices</h2>
+<ul>
+  <li>Read signed out — that is how the app arrives. Everything but sync works.</li>
+  <li>Sign out at any time, and choose whether to keep your library on the device.</li>
+  <li>Delete the account and everything synced to it from the <strong>You</strong> tab, or <a href="delete-account.html">by email</a>.</li>
+  <li>Delete the app to remove everything held on the device.</li>
+  <li>Email me with a question, a request for a copy of your data, or a complaint about any of this.</li>
+  <li>Complain to your local data-protection authority if you are in a country that has one.</li>
+</ul>
+
+<h2>Changes</h2>
+<p>I will update this page when the app, its providers or the law changes, and the new effective date will appear at the top.</p>
+
+<h2>Contact</h2>
+<p>
+  Dat Vu<br>
+  Ho Chi Minh City, Vietnam<br>
+  <a href="mailto:datvu.meo@gmail.com">datvu.meo@gmail.com</a>
+</p>
+
+<footer>Nox Bible · <a href="support.html">Support</a> · <a href="delete-account.html">Delete account</a> · <a href="/">All apps</a></footer>
+
+</main>
+</body>
+</html>

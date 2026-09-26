@@ -1,0 +1,43 @@
+/* Nox Bible: black ink on white paper, and the inverse at night — as in the app. */
+:root {
+  --bg: #fbfaf7; --card: #ffffff; --ink: #141414; --muted: #6b6b6b;
+  --line: #e2e0da; --accent: #141414;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #0d0d0d; --card: #161616; --ink: #f2f2f0; --muted: #9a9a96;
+    --line: #2a2a2a; --accent: #f2f2f0;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #0d0d0d; --card: #161616; --ink: #f2f2f0; --muted: #9a9a96;
+  --line: #2a2a2a; --accent: #f2f2f0;
+}
+* { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body {
+  margin: 0; background: var(--bg); color: var(--ink);
+  font: 16px/1.65 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  padding: 24px 16px 64px;
+}
+main { max-width: 720px; margin: 0 auto; }
+header { margin-bottom: 26px; }
+h1 { font-family: Georgia, "Times New Roman", serif; font-weight: 600; font-size: 1.75rem; margin: 0 0 6px; }
+h2 { font-size: 1.1rem; margin: 32px 0 10px; padding-top: 14px; border-top: 1px solid var(--line); }
+h3 { font-size: 1rem; margin: 22px 0 6px; }
+.card h3 { margin: 0 0 8px; }
+.meta { color: var(--muted); font-size: .92rem; margin: 2px 0; }
+.card { background: var(--card); border: 1px solid var(--line); border-radius: 12px; padding: 16px 20px; margin: 16px 0; }
+a { color: var(--accent); text-underline-offset: 2px; }
+ul, ol { padding-left: 20px; }
+code { font-size: .9em; overflow-wrap: anywhere; }
+table { border-collapse: collapse; width: 100%; font-size: .95rem; }
+th, td { text-align: left; padding: 8px 10px; border-bottom: 1px solid var(--line); vertical-align: top; }
+th { color: var(--muted); font-weight: 600; }
+.scroll { overflow-x: auto; }
+nav.top { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 24px; }
+nav.top a {
+  text-decoration: none; border: 1px solid var(--line); border-radius: 999px;
+  padding: 6px 14px; color: var(--ink); font-size: .9rem; background: var(--card);
+}
+footer { margin-top: 40px; padding-top: 16px; border-top: 1px solid var(--line); color: var(--muted); font-size: .88rem; }
