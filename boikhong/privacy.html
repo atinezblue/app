@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Chính sách quyền riêng tư — Bói hông?</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<main>
+
+<header>
+  <h1>Chính sách quyền riêng tư</h1>
+  <p class="meta">Bói hông?</p>
+  <p class="meta">Ngày hiệu lực: 21/10/2026</p>
+  <p class="meta">Cập nhật lần cuối: 21/10/2026</p>
+</header>
+
+<nav class="top"><a href="support.html">Hỗ trợ</a><a href="#english">English summary</a></nav>
+
+<p>Mình là Đạt Vũ (Dat Vu), nhà phát triển độc lập, tự làm app <strong>Bói hông?</strong>. Trang này nói rõ, bằng lời dễ hiểu, app làm gì với thông tin của bạn. Nó áp dụng cho cả bản iOS và Android; hai bản hoạt động như nhau, trừ chỗ nào trang này ghi khác.</p>
+
+<h2>Nói ngắn gọn</h2>
+<ul>
+  <li><strong>Không tài khoản, không đăng nhập.</strong> App không hỏi tên, email, số điện thoại hay bất cứ gì về bạn.</li>
+  <li><strong>Không có ô nào để gõ.</strong> Bạn chỉ cần bấm “Bói hông bạn ơi?”, app rút một quẻ. Câu hỏi bạn nghĩ trong đầu vẫn nằm trong đầu bạn.</li>
+  <li><strong>Mọi quẻ đều có sẵn trong app.</strong> Câu của hôm nay, hơn 2.000 quẻ, hoa văn và widget đều nằm trong app và chạy được khi không có mạng.</li>
+  <li><strong>Có quảng cáo.</strong> App hiện một banner quảng cáo nhỏ của Google AdMob ở cuối trang. Đây là phần duy nhất của app gửi dữ liệu ra ngoài, xem chi tiết bên dưới.</li>
+  <li><strong>Không có gì để mua.</strong> App không có mua hàng trong app và không có gói đăng ký.</li>
+</ul>
+
+<h2>Những gì nằm trên máy bạn</h2>
+<p>App không có cơ sở dữ liệu nào về bạn. Câu của hôm nay được chọn theo ngày trên điện thoại của bạn, nên ai cũng thấy cùng một câu vào cùng một ngày. Quẻ được rút ngẫu nhiên ngay trên máy. App không lưu lại bạn đã rút những quẻ nào: đóng app là danh sách đó mất.</p>
+<p>Widget “Câu của hôm nay” mang theo bản sao danh sách câu của riêng nó và tự đổi câu lúc nửa đêm. Nó không cần mạng và không nhận gì từ app.</p>
+<p>Mình không bao giờ nhận được những thông tin này. Xoá app là xoá hết, theo cách điện thoại vẫn làm.</p>
+
+<h2 id="quang-cao">Quảng cáo</h2>
+<p>App dùng <strong>Google Mobile Ads SDK (AdMob)</strong> để hiện một banner ở cuối trang chủ và trang bói. Quảng cáo giúp app được miễn phí.</p>
+<h3>Đồng ý trước khi có quảng cáo</h3>
+<p>Khi mở app, việc đầu tiên là hỏi nền tảng quản lý đồng ý của Google (Google User Messaging Platform) xem nơi bạn sống có luật yêu cầu hỏi ý bạn không, ví dụ khu vực Kinh tế châu Âu, Vương quốc Anh và Thụy Sĩ. Nếu có, Google sẽ hiện mẫu hỏi ý của họ, và chỉ khi lựa chọn của bạn cho phép thì app mới bắt đầu tải quảng cáo. Nếu không được phép, app vẫn chạy y như cũ, chỉ là không có quảng cáo.</p>
+<h3>Google có thể thu thập gì</h3>
+<p>Để hiện quảng cáo, đo lượt hiển thị và chống gian lận, SDK của Google có thể thu thập:</p>
+<div class="scroll"><table>
+  <tr><th>Loại</th><th>Ví dụ</th></tr>
+  <tr><td>Thông tin thiết bị</td><td>Dòng máy, hệ điều hành và phiên bản, ngôn ngữ, nhà mạng, loại kết nối.</td></tr>
+  <tr><td>Mã định danh</td><td>Trên Android: Advertising ID của Google, nếu bạn chưa xoá hay tắt nó trong cài đặt. Trên iOS: app <strong>không</strong> xin quyền theo dõi (App Tracking Transparency), nên Google không được đọc mã quảng cáo IDFA của bạn.</td></tr>
+  <tr><td>Vị trí gần đúng</td><td>Suy ra từ địa chỉ IP, ở mức quốc gia hoặc thành phố. App không xin quyền vị trí.</td></tr>
+  <tr><td>Tương tác với quảng cáo</td><td>Quảng cáo nào đã hiện, bạn có bấm vào không.</td></tr>
+  <tr><td>Chẩn đoán</td><td>Lỗi và hiệu năng của chính SDK quảng cáo.</td></tr>
+</table></div>
+<p>Google xử lý những dữ liệu này theo <a href="https://policies.google.com/privacy">Chính sách quyền riêng tư của Google</a>. Bạn có thể đọc thêm cách Google dùng dữ liệu từ các app đối tác tại <a href="https://policies.google.com/technologies/partner-sites">policies.google.com/technologies/partner-sites</a>. Mình chỉ xem được các con số tổng hợp trong bảng điều khiển AdMob (bao nhiêu lượt hiển thị, doanh thu bao nhiêu), không xem được thông tin của từng người.</p>
+<h3>Bạn chọn được gì</h3>
+<ul>
+  <li><strong>Android:</strong> vào <em>Cài đặt ▸ Bảo mật và quyền riêng tư ▸ Quảng cáo</em> (tên mục có thể khác tuỳ máy) để xoá hoặc đặt lại Advertising ID. Khi đã xoá, quảng cáo sẽ không còn dựa trên ID đó.</li>
+  <li><strong>iOS:</strong> app không bao giờ hỏi xin theo dõi bạn. Nếu muốn chắc chắn, bạn có thể tắt <em>Cài đặt ▸ Quyền riêng tư &amp; Bảo mật ▸ Theo dõi ▸ Cho phép ứng dụng yêu cầu theo dõi</em>.</li>
+  <li><strong>Nếu bạn đã thấy mẫu hỏi ý của Google</strong> và muốn chọn lại, hãy xoá rồi cài lại app; mẫu đó sẽ hiện lại. Bạn cũng có thể email cho mình.</li>
+</ul>
+
+<h2>Chia sẻ và sao chép</h2>
+<p>Khi bạn bấm <strong>Khoe quẻ</strong>, thẻ quẻ được vẽ ngay trên máy rồi chuyển cho bảng chia sẻ của điện thoại. Gửi đi đâu là do bạn chọn, và app nhận sẽ xử lý theo cách của nó. Nút sao chép đưa câu quẻ vào bộ nhớ tạm. App không tải lên cái nào cả. Nếu bạn chọn <em>Lưu hình ảnh</em> trong bảng chia sẻ trên iPhone hay iPad, máy sẽ hỏi một lần xem Bói hông? có được thêm ảnh vào thư viện ảnh không. Quyền đó chỉ cho app thêm thẻ quẻ vào, không cho app xem ảnh của bạn.</p>
+
+<h2>Nếu bạn email cho mình</h2>
+<p>Khi bạn gửi email nhờ hỗ trợ, mình dùng những gì bạn gửi (địa chỉ email, thông tin máy, ảnh chụp màn hình và nội dung thư) để trả lời và tìm hiểu lỗi. Mình giữ email hỗ trợ trong 12 tháng, trừ khi có lý do pháp lý hoặc bảo mật để giữ lâu hơn.</p>
+
+<h2>App không bao giờ xin</h2>
+<p>Bói hông? không xin quyền danh bạ, vị trí, máy ảnh, micro, thông báo, dữ liệu sức khoẻ hay thanh toán, và không đọc ảnh của bạn. Trên Android, app cần quyền truy cập internet để tải quảng cáo. Thư viện quảng cáo của Google cũng tự khai báo thêm quyền kiểm tra trạng thái mạng và quyền đọc Advertising ID.</p>
+
+<h2>Bên thứ ba liên quan</h2>
+<ul>
+  <li><strong>Google</strong>: AdMob và User Messaging Platform, cho quảng cáo và việc hỏi ý.</li>
+  <li><strong>Apple App Store</strong> và <strong>Google Play</strong>: phân phối app.</li>
+</ul>
+<p>Mình không bán thông tin cá nhân. App không có máy chủ riêng, và mình không giữ cơ sở dữ liệu nào về người dùng.</p>
+
+<h2>Trẻ em</h2>
+<p>Bói hông? là app giải trí cho mọi người, không hướng tới trẻ em. Quẻ chỉ để vui, không phải lời khuyên về sức khoẻ, tiền bạc hay pháp lý. Mình không cố ý thu thập thông tin cá nhân của trẻ em.</p>
+
+<h2>Thay đổi</h2>
+<p>Khi app, nhà cung cấp hoặc luật thay đổi, mình sẽ cập nhật trang này, và ngày mới sẽ ghi ở đầu trang.</p>
+
+<h2>Liên hệ</h2>
+<p>Đạt Vũ (Dat Vu)<br>Thành phố Hồ Chí Minh, Việt Nam<br><a href="mailto:datvu.meo@gmail.com?subject=B%C3%B3i%20h%C3%B4ng%3F">datvu.meo@gmail.com</a></p>
+
+<h2 id="english">English summary</h2>
+<p>Bói hông? is a Vietnamese fortune-slip app by Dat Vu, an independent developer. It has no account, no sign-in and no text input. Every fortune and the daily quote ship inside the app and work offline. Nothing about you is stored or sent by the app itself.</p>
+<p>The app shows a small Google AdMob banner. Before any ad is requested, Google's User Messaging Platform shows a consent form where the law requires one (for example in the EEA, the UK and Switzerland), and ads load only if your choice allows them. Google's SDK may collect device information, approximate location from your IP address, ad interactions and diagnostics, and on Android the Advertising ID. On iOS the app never asks to track you, so Google cannot read your IDFA. See <a href="https://policies.google.com/privacy">Google's Privacy Policy</a>.</p>
+<p>Share cards are drawn on the device and handed to your phone's share sheet; nothing is uploaded. There are no in-app purchases. The app is not directed at children. Questions: <a href="mailto:datvu.meo@gmail.com">datvu.meo@gmail.com</a>.</p>
+
+<footer>Bói hông? · <a href="support.html">Hỗ trợ</a> · <a href="/">Tất cả app</a></footer>
+
+</main>
+</body>
+</html>
