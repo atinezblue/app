@@ -21,3 +21,10 @@
 |---|---|
 | Privacy Policy | [https://atinezblue.github.io/app/phongthuy/privacy.html](https://atinezblue.github.io/app/phongthuy/privacy.html) |
 | Support | [https://atinezblue.github.io/app/phongthuy/support.html](https://atinezblue.github.io/app/phongthuy/support.html) |
+
+## Clean Launcher
+
+| Page | URL |
+|---|---|
+| Privacy Policy | [https://atinezblue.github.io/app/cleanlauncher/privacy.html](https://atinezblue.github.io/app/cleanlauncher/privacy.html) |
+| Support | [https://atinezblue.github.io/app/cleanlauncher/support.html](https://atinezblue.github.io/app/cleanlauncher/support.html) |
