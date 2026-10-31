@@ -22,7 +22,9 @@
 | Privacy Policy | [https://atinezblue.github.io/app/phongthuy/privacy.html](https://atinezblue.github.io/app/phongthuy/privacy.html) |
 | Support | [https://atinezblue.github.io/app/phongthuy/support.html](https://atinezblue.github.io/app/phongthuy/support.html) |
 
-## Clean Launcher
+## Shoji: Clean Launcher (Android only)
+
+Google Play: [com.cleanlauncher](https://play.google.com/store/apps/details?id=com.cleanlauncher). Called Clean Launcher until October 2026; the pages keep the `cleanlauncher` path the Play listing links to.
 
 | Page | URL |
 |---|---|
